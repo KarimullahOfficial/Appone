@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Burger from "../../assets/hero/hero-2.png";
 import { Link } from "react-router-dom";
@@ -9,7 +8,7 @@ const Sectionone = () => {
       <Container>
         <Row>
           <Col lg={7} className="mb-5 mb-lg-0">
-            <div className="position:relative">
+            <div className="position-relative">
               {" "}
               <img src={Burger} className="img-fluid" alt="hero" />
               <div className="price_badge">

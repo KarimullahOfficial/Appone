@@ -1,13 +1,22 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../../Styles/HeaderStyle.css";
 import Logo from "../../assets/logo/logo.png";
 const Header = () => {
+  const [nav, setnav] = useState(false);
+  const changevalueonScroll = () => {
+    const scrollvalue = document?.documentElement?.scrollTop;
+    scrollvalue > 100 ? setnav(true) : setnav(false);
+  };
+  window.addEventListener("scroll", changevalueonScroll);
   return (
     <header>
-      <Navbar collapseOnSelect expand="lg">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        className={`${nav === true ? "sticky" : " "}`}
+      >
         <Container>
           <Navbar.Brand href="#home">
             <Link to="/" className="logo">
