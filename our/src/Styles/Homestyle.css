@@ -84,3 +84,21 @@
 .about_box p {
   padding: 0 20px;
 }
+
+@media (max-width: 767px) {
+  /* Home Hero 1.0 */
+  .hero_section .hero_text h1 {
+    font-size: 5.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .about_section h2 {
+    font-size: 2.5rem;
+  }
+  .about_section p {
+    padding: 20px 0;
+  }
+  .about_box {
+    padding: 0;
+  }
+}
