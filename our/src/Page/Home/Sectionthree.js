@@ -9,7 +9,6 @@ import Image5 from "../../assets/menu/burger-15.jpg";
 import Image6 from "../../assets/menu/burger-16.jpg";
 import Image7 from "../../assets/menu/burger-17.jpg";
 import Image8 from "../../assets/menu/burger-18.jpg";
-
 import Cards from "../../Component/Layouts/Cards";
 const mockData = [
   {
@@ -78,13 +77,30 @@ const mockData = [
   },
   // Add more mock data objects as needed
 ];
+
+const renderRatingIcons = (rating) => {
+  const stars = [];
+  for (let i = 0; i < 5; i++) {
+    if (rating > 2) {
+      stars.push(<i key={i} className="bi bi-star-fill"></i>);
+      rating--;
+    } else if (rating > 0 && rating < 1) {
+      stars.push(<i key={"half"} className="bi bi-star-half"></i>);
+      rating--;
+    } else {
+      stars.push(<i key={`empty${i}`} className="bi bi-star"></i>);
+    }
+  }
+  return stars;
+};
+
 const Sectionthree = () => {
   return (
     <>
       <section className="menu_section">
         <Container>
           <Row>
-            <Col lg={{ span: 8, offset: 2 }}>
+            <Col lg={{ span: 8, offset: 2 }} className="text-center mb-5">
               <h2> OUR CRAZY BURGER</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -101,7 +117,7 @@ const Sectionthree = () => {
                 title={carddata.title}
                 pargraph={carddata.paragraph}
                 price={carddata.price}
-                // renderRatingIcons={ renderRatingIcons}
+                renderRatingIcons={renderRatingIcons}
               ></Cards>
             ))}
           </Row>
