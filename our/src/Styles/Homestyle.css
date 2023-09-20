@@ -182,6 +182,35 @@
   margin-top: 15px;
   font-size: 18px;
 }
+.promotion_section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: var(--light-grey);
+}
+.promotion_section h2 {
+  font-size: 3.25rem;
+  margin-bottom: 25px;
+}
+.promotion_section p {
+  font-size: 1.125rem;
+}
+.promotion_section ul {
+  padding-left: 15px;
+}
+.bg_parallax_scroll {
+  background: url("../assets/parallax/bg.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 700px;
+}
+
+@media (max-width: 1200px) {
+  /* Home Promotion 4.0 */
+  .promotion_section h2 {
+    font-size: 2.25rem;
+  }
+}
 
 @media (max-width: 767px) {
   /* Home Hero 1.0 */
@@ -201,5 +230,9 @@
   }
   .menu_section .para {
     padding: 10px, 0px;
+  }
+  .bg_parallax_scroll {
+    background-attachment: scroll;
+    height: 500px;
   }
 }

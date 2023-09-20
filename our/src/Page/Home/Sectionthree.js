@@ -81,7 +81,7 @@ const mockData = [
 const renderRatingIcons = (rating) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
-    if (rating > 2) {
+    if (rating > 0.5) {
       stars.push(<i key={i} className="bi bi-star-fill"></i>);
       rating--;
     } else if (rating > 0 && rating < 1) {

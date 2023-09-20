@@ -4,6 +4,8 @@ import "../../Styles/Homestyle.css";
 import Sectionone from "./Sectionone";
 import { Sectiontwo } from "./Sectiontwo";
 import Sectionthree from "./Sectionthree";
+import Sectionfour from "./Sectionfour";
+import Sectionfive from "./Sectionfive";
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
         <Sectionone></Sectionone>
         <Sectiontwo></Sectiontwo>
         <Sectionthree></Sectionthree>
+        <Sectionfour></Sectionfour>
+        <Sectionfive></Sectionfive>
       </Master>
     </>
   );
